@@ -14,6 +14,8 @@ var path = require('path');
 // Middleware used for POST requests.
 var bodyParser = require('body-parser');
 
+var User = require('./models/users.js');
+
 // Passing bodyParser methods .json() and .urlencoded in to ALL requests.
 // Now parsing for JSON strings is turned on.
 // (format: application/json). Ex: {"Name":"John Smith","Age":"23"}
@@ -38,6 +40,16 @@ router.get('/', function(req, res) {
     // pass in the path to the file.
     res.sendFile(path.join(__dirname, '../views', 'index.html')); // If you want to use a template engine (jade, ejs), use res.render
     // path.join returns '/views/index.html'
+});
+
+router.get('/users', function(req, res) {
+    User.find({}, function(err, allUsers) {
+      if (err) {
+        console.error(err);
+      } else {
+        res.send(allUsers); 
+      }
+    });
 });
 
 router.get('/users/:name', function(req, res) {
