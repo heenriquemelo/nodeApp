@@ -50,8 +50,8 @@ server.listen(server.get('port'), function() {
 // Use POST method (done)
 // Set up ejs (done)
 // Use ejs to modularize views - write foorter/header separate from main page
-// Learn to deploy on Heroku (~)
-// Host it for free on heroku
+// Learn to deploy on Heroku (done)
+// Host it for free on heroku (done)
 // Set up mongodb mongoose (done)
 // Use mongoose to persist user data remotely - heroku
 // Pull that user data from the db and display it on the page

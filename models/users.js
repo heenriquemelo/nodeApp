@@ -1,5 +1,10 @@
 // Good tutorial: https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications
 
+// Note: heroku runs 'npm start' on your node app automatically and also installs the modules
+// list on the package.json file. 
+// I wasn't being able to get the app running bc I was trying to connect to a DB running in my localhost.
+// Obvously, the app crashed. 
+
 var mongoose = require('mongoose'); // loads module.
 var db = mongoose.connection; // ??
 
