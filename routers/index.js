@@ -14,7 +14,7 @@ var path = require('path');
 // Middleware used for POST requests.
 var bodyParser = require('body-parser');
 
-var User = require('./models/users.js');
+var User = require('../models/users.js');
 
 // Passing bodyParser methods .json() and .urlencoded in to ALL requests.
 // Now parsing for JSON strings is turned on.
